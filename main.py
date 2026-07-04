@@ -1,14 +1,14 @@
 import prisoners as pr
 
 player1 = pr.Agression()
-player2 = pr.Peace()
+player2 = pr.Eye_for_eye()
 
 player1_moves = []
 player2_moves = []
 
 for _ in range(100):
     player1_move = player1.move(player2_moves)
-    player2_move = player1.move(player1_moves)
+    player2_move = player2.move(player1_moves)
     if player1_move > player2_move:
         player1.score += 5
     elif player1_move < player2_move:
